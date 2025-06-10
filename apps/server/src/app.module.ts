@@ -1,10 +1,12 @@
 import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
+import { TRPCModule } from "nestjs-trpc";
 
 @Module({
-	imports: [],
-	controllers: [AppController],
-	providers: [AppService],
+	imports: [
+		// 지정한 경로에 trpc 라우터 파일을 자동 생성
+		TRPCModule.forRoot({ autoSchemaFile: "../../packages/trpc/src/server" }),
+	],
+	controllers: [],
+	providers: [],
 })
 export class AppModule {}
