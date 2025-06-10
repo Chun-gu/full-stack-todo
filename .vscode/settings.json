@@ -1,0 +1,10 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true, // 저장시 자동 포맷팅
+	"editor.linkedEditing": true, // 태그 쌍 자동 수정
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	]
+}
