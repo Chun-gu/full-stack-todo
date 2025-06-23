@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const todoSchema = z.object({
 	id: z.string(),
-	name: z.string(),
+	name: z.string().min(1, { message: "Name is required" }),
 	description: z.string(),
 	completed: z.boolean(),
 	createdAt: z.string(),
